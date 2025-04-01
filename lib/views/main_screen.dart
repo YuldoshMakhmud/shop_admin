@@ -62,7 +62,23 @@ class _MainScreenState extends State<MainScreen> {
         title: Text("Management"),
       ),
       body: _selectedScreen,
-      sideBar: SideBar(items: [
+      sideBar: SideBar(
+        header: Container(
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.black,
+          ),
+          child: Center(
+            child: Text("Multi Vendor Admin",style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.7,
+              color: Colors.white,
+            )),
+          ),
+        ),
+        items: [
         AdminMenuItem(title: "Vendors",route: VendorsScreen.id,icon: CupertinoIcons.person_3),
         AdminMenuItem(title: "Buyers",route: BuyersScreen.id,icon: CupertinoIcons.person),
         AdminMenuItem(title: "Orders",route: OrdersScreen.id,icon: CupertinoIcons.shopping_cart),
